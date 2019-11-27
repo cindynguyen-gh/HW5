@@ -21,7 +21,7 @@ def about_me(request):
         'name': 'Ash Ketchum',
         'pokemon': 'Pikachu',
     }
-    return render(request, 'about_me.html', context)
+    return render(request, 'content/contact.html', context)
 
 
 def github_api_example(request):

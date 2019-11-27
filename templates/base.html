@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col sidepanel">
-                <h1>Colette <span>Beaumont</span></h1>
+                <h1>{% block title %}{% endblock %}</h1>
                 <img src="img/profile.jpg" class="img-fluid rounded-circle" />
 
                 <div class="nav flex-column nav-pills red-nav">
@@ -50,7 +50,9 @@
                 </div>
             </div>
 
-            {{content}}
+            
+            {% block content %}
+            {% endblock %}
 
 
         </div>
