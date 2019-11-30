@@ -14,9 +14,10 @@ def projects(request):
     # keep our code better organized.
     response = requests.get('https://api.github.com/users/cindynguyen-gh/repos')
     repos = response.json()
-    print(repos)
+    images=["/static/img/project/dandelion.jpg", "/static/img/project/drop.jpg", "/static/img/project/elephnatjpg.jpg","/static/img/project/italy.jpg","/static/img/project/nature.jpg"  ]
     context = {
         'repos': repos,
+        'images': images,
     }
     return render(request, 'content/projects.html', context)
 
